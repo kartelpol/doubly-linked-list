@@ -51,7 +51,7 @@ class LinkedList {
         var count = 0;
         var node = new Node(data);
 
-      if(index==0){
+        if(index==0){
            var temp = this._head;
            this._head = node;
            node._next = temp;
@@ -89,6 +89,7 @@ class LinkedList {
        if (this.length == 1){
         this._head = null;
         this._tail = null;
+        this.length = 0;
         return this; 
        } 
         while (count < index){
