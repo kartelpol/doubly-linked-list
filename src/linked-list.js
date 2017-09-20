@@ -51,9 +51,11 @@ class LinkedList {
         var count = 0;
         var node = new Node(data);
 
-        if(!this.length){  
-            append(data);
-            return this;
+      if(index==0){
+           var temp = this._head;
+           this.head = node;
+           node._next = temp;
+           return this;
         }
         while (count < index-1){
             currentNode = currentNode.next;
